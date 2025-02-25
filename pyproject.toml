@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "llm-mixtiles-excrcise"
+version = "0.1.0"
+description = ""
+authors = ["Itay Flikier <itayff@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "mixtiles_exercise_be", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.13"
+pillow = "^11.1.0"
+requests = "^2.32.3"
+exifread = "^3.0.0"
+geopy = "^2.4.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+line_length = 120  # Same as black's line length
